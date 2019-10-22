@@ -1,0 +1,4 @@
+Enabled
+true
+MethodNormalStrokingLubeMethod
+How often should this stroking method be used? (Options: Enabled, Disabled, 1 (rarely used), 2 (uncommonly used), 3 (commonly used), 4 (very commonly used))

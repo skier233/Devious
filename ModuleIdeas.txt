@@ -1,0 +1,1 @@
+Show pictures and 10 strokes unless its a certain type of picture and then an edge
