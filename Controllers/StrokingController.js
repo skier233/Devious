@@ -8,6 +8,10 @@ function stroke(strokeModifier)
 
 function edge(edgeModifier, strokingMethod)
 {
+    if (strokingMethod != null)
+    {
+        getStrokingMethodByName(strokingMethod)
+    }
     startEdgingBPM(70, "test edge");
 }
 
