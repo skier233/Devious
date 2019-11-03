@@ -1,5 +1,10 @@
 
 function TWIST_stroke()
 {
-    sm("Start twisting your %cock% in opposite directions");
+    return "Start twisting your %cock% in opposite directions with lube";
+}
+
+function TWIST_edge()
+{
+    return "%startEdging% by twisting your %cock% in opposite directions with lube";
 }

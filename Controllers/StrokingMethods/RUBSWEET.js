@@ -1,5 +1,10 @@
 
 function RUBSWEET_stroke()
 {
-    sm("Rub the sweet spot of your %cock%");
+    return "Rub the sweet spot of your %cock%";
+}
+
+function RUBSWEET_edge()
+{
+    return "Rub the sweet spot of your %cock% %untilEdge%";
 }

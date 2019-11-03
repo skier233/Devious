@@ -1,5 +1,10 @@
 
 function NORMALSTROKEBOTHLUBE_stroke()
 {
-    sm("Start stroking with both hands");
+    return "Start stroking with both hands with lube";
+}
+
+function NORMALSTROKEBOTHLUBE_edge()
+{
+    return "%startEdging% with both hands with lube";
 }

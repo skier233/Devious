@@ -1,5 +1,10 @@
 
 function PALM_stroke()
 {
-    sm("Start palming your %cock%");
+    return "Start palming your %cock% with lube";
+}
+
+function PALM_edge()
+{
+    return "Start palming your %cock% with lube %untilEdge%";
 }

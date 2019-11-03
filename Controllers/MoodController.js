@@ -1,4 +1,4 @@
-let StrokingMood = "normal";
+let StrokingMood = "NEUTRAL";
 
 function getStrokingMood()
 {

@@ -1,5 +1,10 @@
 
 function CIRCULARPALM_stroke()
 {
-    sm("Start circular palming your %cock%");
+    return "Start circular palming your %cock% with lube";
+}
+
+function CIRCULARPALM_edge()
+{
+    return "%startEdging% by circular palming your %cock% with lube";
 }

@@ -1,5 +1,10 @@
 
 function UNDERLEG_stroke()
 {
-    sm("Start stroking your %cock% from under your leg");
+    return "Start stroking your %cock% from under your leg";
+}
+
+function UNDERLEG_edge()
+{
+    return "Start stroking your %cock% from under your leg %untilEdge%";
 }

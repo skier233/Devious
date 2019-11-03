@@ -1,5 +1,10 @@
 
 function STROKEHEAD_stroke()
 {
-    sm("Start stroking the head of your %cock%");
+    return "Start stroking the head of your %cock% with lube";
+}
+
+function STROKEHEAD_edge()
+{
+    return "Start stroking the head of your %cock% with lube %untilEdge%";
 }

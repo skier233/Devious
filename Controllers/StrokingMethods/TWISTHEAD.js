@@ -1,5 +1,10 @@
 
 function TWISTHEAD_stroke()
 {
-    sm("Start twisting the head of your %cock%");
+    return "Start twisting the head of your %cock% with lube";
+}
+
+function TWISTHEAD_edge()
+{
+    return "Start twisting the head of your %cock% with lube %untilEdge%";
 }

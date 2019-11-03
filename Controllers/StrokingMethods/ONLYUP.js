@@ -1,5 +1,10 @@
 
 function ONLYUP_stroke()
 {
-    sm("Start only stroking up your %cock%");
+    return "Start only stroking up your %cock% with lube";
+}
+
+function ONLYUP_edge()
+{
+    return "Start only stroking up your %cock% with lube %untilEdge%";
 }

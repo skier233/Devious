@@ -1,5 +1,10 @@
 
 function TICKLESWEET_stroke()
 {
-    sm("Tickle the sweet spot of your %cock% without moving the skin");
+    return "Tickle the sweet spot of your %cock% without moving the skin";
+}
+
+function TICKLESWEET_edge()
+{
+    return "Start tickling the sweet spot of your %cock% without moving the skin %untilEdge%";
 }

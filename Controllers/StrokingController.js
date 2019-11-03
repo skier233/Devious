@@ -6,18 +6,63 @@ function stroke(strokeModifier)
     strokeInternal(30, 80);
 }
 
-function edge(edgeModifier, strokingMethod)
+function stroke(strokeModifier, strokingCategory, strokingMethod)
 {
+    let strokingMethodToStart = null;
     if (strokingMethod != null)
     {
-        getStrokingMethodByName(strokingMethod)
+        strokingMethodToStart = getStrokingMethodByName(strokingMethod)
     }
-    startEdgingBPM(70, "test edge");
+    else if (strokingCategory != null)
+    {
+        strokingMethodToStart = getStrokingMethodByCategory(strokingCategory, edgeModifier);
+    }
+    else
+    {
+        strokingMethodToStart = getStrokingMethodByName("NORMALSTROKE")
+        startEdgingBPM(70, "test edge");
+    }
+    strokingMethodToStart.startStroking(strokeModifier)
+}
+
+function edge(edgeModifier, strokingCategory, strokingMethod)
+{
+    let strokingMethodToStart = null;
+    if (strokingMethod != null)
+    {
+        strokingMethodToStart = getStrokingMethodByName(strokingMethod)
+    }
+    else if (strokingCategory != null)
+    {
+        strokingMethodToStart = getStrokingMethodByCategory(strokingCategory, edgeModifier);
+    }
+    else
+    {
+        strokingMethodToStart = getStrokingMethodByName("NORMALSTROKE")
+        startEdgingBPM(70, "test edge");
+    }
+    strokingMethodToStart.edge(edgeModifier)
+}
+
+function Tease(teaseLength, edgeOnly, strokeOnly)
+{
+    if (edgeOnly)
+    {
+
+    }
+    else if (strokeOnly)
+    {
+
+    }
+    else
+    {
+
+    }
 }
 
 function startEdging()
 {
-    startEdgingBPM(3, 80)
+    startEdgingBPM(3, 80);
 }
 
 function startEdgingBPM(bpm, message) {
@@ -44,8 +89,12 @@ function startEdgingBPM(bpm, message) {
     }
 }
 
-function strokeInternal(duration, bpm)
+function strokeInternal(duration, bpm, message)
 {
+    if (message != undefined && message != null)
+    {
+        sm(message, 0);
+    }
     startStroking(bpm);
     let tauntFrequency = getTauntFrequency();
     let tauntIncrement = getTauntTime(tauntFrequency);
