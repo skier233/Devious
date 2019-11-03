@@ -2,45 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cc2ddb1-b16c-4b21-b76e-1209d97b51c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Controllers/VariablesController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/MoodController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/MoodController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/CIRCULARPALM.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/CIRCULARPALM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/FIGUREEIGHT.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/FIGUREEIGHT.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/FINGERSTEASE.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/FINGERSTEASE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/FISTPEEK.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/FISTPEEK.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/HOLDSTROKE.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/HOLDSTROKE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/HOLDSTROKEHEAD.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/HOLDSTROKEHEAD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/HOLDSTROKETIP.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/HOLDSTROKETIP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/HOLDTWIST.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/HOLDTWIST.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/HOLDTWISTHEAD.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/HOLDTWISTHEAD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/HOLDTWISTTIP.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/HOLDTWISTTIP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/NORMALSTROKE.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/NORMALSTROKE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/NORMALSTROKEBOTHLUBE.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/NORMALSTROKEBOTHLUBE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/NORMALSTROKELUBE.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/NORMALSTROKELUBE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/ONEFINGER.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/ONEFINGER.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/ONETOPONEBOTTOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/ONETOPONEBOTTOM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/ONLYDOWN.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/ONLYDOWN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/ONLYDOWNCIRCLE.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/ONLYDOWNCIRCLE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/ONLYUP.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/ONLYUP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/ONLYUPCIRCLE.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/ONLYUPCIRCLE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/PALM.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/PALM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/PALMRUB.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/PALMRUB.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/ROLL.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/ROLL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/RUBSWEET.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/RUBSWEET.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/STOMACHRUB.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/STOMACHRUB.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/STROKEHEAD.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/STROKEHEAD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/STROKETIP.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/STROKETIP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/TICKLESWEET.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/TICKLESWEET.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/TWIST.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/TWIST.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/TWISTCIRCLE.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/TWISTCIRCLE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/TWISTHEAD.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/TWISTHEAD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/TWISTTIP.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/TWISTTIP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/UNDERLEG.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/UNDERLEG.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethods/UNDERLEGLUBE.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethods/UNDERLEGLUBE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethodsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethodsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personality.properties" beforeDir="false" afterPath="$PROJECT_DIR$/personality.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -204,10 +166,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="662" />
-    <option name="y" value="-22" />
-    <option name="width" value="2229" />
-    <option name="height" value="1174" />
+    <option name="x" value="400" />
+    <option name="y" value="-8" />
+    <option name="width" value="2576" />
+    <option name="height" value="1576" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -290,7 +252,7 @@
       <updated>1571702096092</updated>
       <workItem from="1571702097187" duration="17129000" />
       <workItem from="1572387723676" duration="8401000" />
-      <workItem from="1572707062033" duration="10982000" />
+      <workItem from="1572707062033" duration="11600000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1571702656144</created>
@@ -306,17 +268,23 @@
       <option name="project" value="LOCAL" />
       <updated>1571745748524</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="working on strokingcontroller and moodcontrollers">
+      <created>1572757794001</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572757794001</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36512000" />
+    <option name="totallyTimeSpent" value="37130000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
-    <editor active="true" />
+    <frame x="3432" y="184" width="2576" height="1576" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17934464" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24152876" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
