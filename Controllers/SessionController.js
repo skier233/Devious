@@ -1,4 +1,4 @@
-
+ignoreModule();
 function continueSession()
 {
     return true;

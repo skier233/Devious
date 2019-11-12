@@ -1,3 +1,4 @@
+ignoreModule();
 let Histories = {};
 
 //region History implementation

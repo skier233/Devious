@@ -1,7 +1,8 @@
+ignoreModule();
 function StrokingMethod(name, startStrokingMethodScript, intensity, tease, torture, closeness, useLube)
 {
     this.Name = name;
-    this.StartStrokingMethodScript = fp("Controllers", "StrokingMethods", this.Name + ".js");
+    this.StrokingMethodScript = fp("Controllers", "StrokingMethods", this.Name + ".js");
     this.Intensity = intensity;
     this.Tease = tease;
     this.Torture = torture;
@@ -13,22 +14,20 @@ function StrokingMethod(name, startStrokingMethodScript, intensity, tease, tortu
     }
     this.UseLube = useLube;
 }
-intensityBpms = [40, 50, 60, 70, 80, 90, 100, 120, 140, 160];
-teaseBpms = [100, 90, 80, 75, 60, 50, 40, 30, 20, 10];
-tortureBpms = [75, 80, 85, 90, 95, 100, 55, 120, 45, 150];
-rapidFireBpms = [75, 80, 85, 100, 130, 140, 170, 200, 220, 240];
+let intensityBpms = [40, 50, 60, 70, 80, 90, 100, 120, 140, 160];
+let teaseBpms = [100, 90, 80, 75, 60, 50, 40, 30, 20, 10];
+let tortureBpms = [75, 80, 85, 90, 95, 100, 55, 120, 45, 150];
+let rapidFireBpms = [75, 80, 85, 100, 130, 140, 170, 200, 220, 240];
 
 StrokingMethod.prototype.constructor = StrokingMethod;
 
 //Stroke Category is an optional parameter as a stroking method can belong to multiple categories
-StrokingMethod.prototype.startStroking = function(strokeModifier, strokeCategory, specifiedBpm, duration) {
-    runScript(this.StartStrokingMethodScript);
+StrokingMethod.prototype.startStroking = function(strokeCategory, specifiedBpm, duration) {
+    runScript(this.StrokingMethodScript);
     let message = null;
     let bpm = 0;
-    if (strokeModifier == null)
-    {
-        strokeModifier = 5;
-    }
+    let strokeModifier = Math.round(getStrokingLevel() / 10);
+
     try
     {
         message = eval(this.Name + "_stroke()");
@@ -42,6 +41,7 @@ StrokingMethod.prototype.startStroking = function(strokeModifier, strokeCategory
     }
     else if (strokeCategory != null)
     {
+        //TODO: add neutral stroking mood
         if (strokeCategory == "INTENSE")
         {
             bpm = intensityBpms[strokeModifier - 1];
@@ -78,28 +78,35 @@ StrokingMethod.prototype.startStroking = function(strokeModifier, strokeCategory
             bpm = intensityBpms[strokeModifier - 1];
         }
     }
-    var tenPercent = bpm*0.1;
+    let tenPercent = bpm*0.1;
     bpm = bpm + randomInteger(0 - tenPercent, tenPercent);
+
+
+    //TODO: remove this. It's just for testing.
+    duration = 5;
+    //TODO: Remove
+
+
     if (duration == null)
         duration = strokeModifier*10;
-    //TODO: use better method of getting stroke length
+    //TODO: use better method of getting stroke length using mood, stroking preference
     strokeInternal(duration, bpm, message);
+    let returnPoints = this.getStrokePoints() * (duration / 60);
+    registerStrokePoints(returnPoints);
+    return returnPoints;
 };
 
-StrokingMethod.prototype.edge = function(strokeModifier, strokeCategory, specifiedBpm) {
-    runScript(this.StartStrokingMethodScript);
+StrokingMethod.prototype.edge = function(strokeCategory, specifiedBpm) {
+    runScript(this.StrokingMethodScript);
     let message = null;
     let bpm = 0;
-    if (strokeModifier == null)
-    {
-        strokeModifier = 5;
-    }
+    let edgeModifier = Math.round(getStrokingLevel() / 10);
     try
     {
-        message = eval(this.Name + "_stroke()");
+        message = eval(this.Name + "_edge()");
     } catch(e)
     {
-        dm("function name error: " + this.Name + "_stroke  " + e)
+        dm("function name error: " + this.Name + "_edge  " + e)
     }
     if (specifiedBpm != null)
     {
@@ -107,55 +114,60 @@ StrokingMethod.prototype.edge = function(strokeModifier, strokeCategory, specifi
     }
     else if (strokeCategory != null)
     {
+        //TODO: add neutral stroking mood
         if (strokeCategory == "INTENSE")
         {
-            bpm = intensityBpms[strokeModifier - 1];
+            bpm = intensityBpms[edgeModifier - 1];
         }
         else if (strokeCategory == "TEASE")
         {
-            bpm = teaseBpms[strokeModifier - 1];
+            bpm = teaseBpms[edgeModifier - 1];
         }
         else if (strokeCategory == "TORTURE")
         {
-            bpm = tortureBpms[strokeModifier - 1];
+            bpm = tortureBpms[edgeModifier - 1];
         }
         else if (strokeCategory == "RAPIDFIRE")
         {
-            bpm = rapidFireBpms[strokeModifier - 1];
+            bpm = rapidFireBpms[edgeModifier - 1];
         }
     }
     else
     {
         if (this.Torture >= this.Tease && this.Torture >= this.Intensity && this.Torture >= this.Closeness)
         {
-            bpm = tortureBpms[strokeModifier - 1];
+            bpm = tortureBpms[edgeModifier - 1];
         }
         else if (this.Tease >= this.Torture && this.Tease >= this.Intensity && this.Tease >= this.Closeness)
         {
-            bpm = teaseBpms[strokeModifier - 1];
+            bpm = teaseBpms[edgeModifier - 1];
         }
         else if (this.Closeness >= (this.Torture + 2) && this.Closeness >= (this.Intensity + 2) && this.Closeness >= (this.Tease + 2))
         {
-            bpm = rapidFireBpms[strokeModifier - 1];
+            bpm = rapidFireBpms[edgeModifier - 1];
         }
         else
         {
-            bpm = intensityBpms[strokeModifier - 1];
+            bpm = intensityBpms[edgeModifier - 1];
         }
     }
-    var tenPercent = bpm*0.1;
+    let tenPercent = bpm*0.1;
     bpm = bpm + randomInteger(0 - tenPercent, tenPercent);
-    //TODO: use better method of getting stroke length
-    strokeInternal(strokeModifier*10, bpm, message);
+    let edgeStat = addEdgeStat();
+    startEdgingBPM(bpm, message);
+    let returnPoints = this.getEdgePoints();
+    dm(this.Name + " Edge Points " + returnPoints);
+    registerStrokePoints(returnPoints);
+    return returnPoints;
 };
 
 //For more information about where these values come from, see StrokePointsCalculations.xlsx
 StrokingMethod.prototype.getStrokePoints = function() {
     let intensityModifier = 1;
-    let teaseModfiier = 0.5;
+    let teaseModifier = 0.5;
     let tortureModifier = 3;
     let closeModifier = 1.5;
-    return this.Intensity*intensityModifier + this.Tease*teaseModfiier + this.Torture*tortureModifier + this.Closeness*closeModifier;
+    return this.Intensity*intensityModifier + this.Tease*teaseModifier + this.Torture*tortureModifier + this.Closeness*closeModifier;
 }
 
 //For more information about where these values come from, see StrokePointsCalculations.xlsx
@@ -174,14 +186,19 @@ StrokingMethod.prototype.getEdgePoints = function() {
         tortureModifier = 3;
         closeModifier = 2.5;
     }
-    return this.Intensity*intensityModifier + this.Tease*teaseModfiier + this.Torture*tortureModifier + useInverseClose ? this.Closeness*closeModifier: (10 - this.Closeness)*closeModifier;
+    return this.Intensity*intensityModifier + this.Tease*teaseModfiier + this.Torture*tortureModifier + (useInverseClose ? this.Closeness*closeModifier: (10 - this.Closeness)*closeModifier);
 }
 
-AllMethods = [];
-teaseMethods = [];
-tortureMethods = [];
-intenseMethods = [];
-rapidFireMethods = [];
+let AllMethods = [];
+let teaseMethods = [];
+let tortureMethods = [];
+let intenseMethods = [];
+let rapidFireMethods = [];
+
+let teaseMethodsEdge = [];
+let tortureMethodsEdge = [];
+let intenseMethodsEdge = [];
+let rapidFireMethodsEdge = [];
 
 initializeMethods();
 function initializeMethods()
@@ -264,6 +281,20 @@ function initializeMethods()
     tortureMethods.push(AllMethods[30]);
     AllMethods.push(new StrokingMethod("ONEFINGER", 1, 9, 1, 0));
     teaseMethods.push(AllMethods[31]);
+    teaseMethods.sort((a, b) => (a.getStrokePoints() > b.getStrokePoints()) ? 1 : -1);
+    tortureMethods.sort((a, b) => (a.getStrokePoints() > b.getStrokePoints()) ? 1 : -1);
+    intenseMethods.sort((a, b) => (a.getStrokePoints() > b.getStrokePoints()) ? 1 : -1);
+    rapidFireMethods.sort((a, b) => (a.getStrokePoints() > b.getStrokePoints()) ? 1 : -1);
+
+    //Use the slice call to clone the original arrays to have another version that is sorted differently
+    teaseMethodsEdge = teaseMethods.slice(0);
+    tortureMethodsEdge = tortureMethods.slice(0);
+    intenseMethodsEdge = intenseMethods.slice(0);
+    rapidFireMethodsEdge = rapidFireMethods.slice(0);
+    teaseMethodsEdge.sort((a, b) => (a.getEdgePoints() > b.getEdgePoints()) ? 1 : -1);
+    tortureMethodsEdge.sort((a, b) => (a.getEdgePoints() > b.getEdgePoints()) ? 1 : -1);
+    intenseMethodsEdge.sort((a, b) => (a.getEdgePoints() > b.getEdgePoints()) ? 1 : -1);
+    rapidFireMethodsEdge.sort((a, b) => (a.getEdgePoints() > b.getEdgePoints()) ? 1 : -1);
 }
 
 function getStrokingMethodByName(name)
@@ -278,9 +309,65 @@ function getStrokingMethodByName(name)
     return null;
 }
 
-function getStrokingMethodByCategory(strokingCategory, edgeModifier)
+function getStrokingMethodByCategory(edging, strokingCategory)
 {
-
+    let list = null;
+    if (strokingCategory == null)
+    {
+        strokingCategory = getStrokingMood();
+    }
+    if (strokingCategory == "INTENSE")
+    {
+        if (edging)
+        {
+            list = intenseMethodsEdge;
+        }
+        else
+        {
+            list = intenseMethods;
+        }
+    }
+    else if (strokingCategory == "TEASE")
+    {
+        if (edging)
+        {
+            list = teaseMethodsEdge;
+        }
+        else
+        {
+            list = teaseMethods;
+        }
+    }
+    else if (strokingCategory == "TORTURE")
+    {
+        if (edging)
+        {
+            list = tortureMethodsEdge;
+        }
+        else
+        {
+            list = tortureMethods;
+        }
+    }
+    else if (strokingCategory == "RAPIDFIRE")
+    {
+        if (edging)
+        {
+            list = rapidFireMethodsEdge;
+        }
+        else
+        {
+            list = rapidFireMethods;
+        }
+    }
+    else
+    {
+        em("Stroking Category: " + strokingCategory + " is not recognized as a valid stroking category");
+        return;
+    }
+    let level = getStrokingLevel();
+    let index = ((level / 100) * list.length) - 1;
+    return list[index];
 }
 
 function getRandomStrokingMethod()

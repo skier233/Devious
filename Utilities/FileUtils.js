@@ -1,3 +1,4 @@
+ignoreModule();
 let separator = java.io.File.separator;
 let File = Java.type("java.io.File");
 let BufferedReader = Java.type("java.io.BufferedReader");

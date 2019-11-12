@@ -1,3 +1,4 @@
+ignoreModule();
 
 function FINGERSTEASE_stroke()
 {

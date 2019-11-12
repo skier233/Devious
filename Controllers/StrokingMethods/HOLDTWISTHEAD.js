@@ -1,3 +1,4 @@
+ignoreModule();
 
 function HOLDTWISTHEAD_stroke()
 {

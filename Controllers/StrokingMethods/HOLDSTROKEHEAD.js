@@ -1,3 +1,4 @@
+ignoreModule();
 
 function HOLDSTROKEHEAD_stroke()
 {

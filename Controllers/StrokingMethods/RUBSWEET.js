@@ -1,3 +1,4 @@
+ignoreModule();
 
 function RUBSWEET_stroke()
 {

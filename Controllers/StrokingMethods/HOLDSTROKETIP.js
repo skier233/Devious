@@ -1,3 +1,4 @@
+ignoreModule();
 
 function HOLDSTROKETIP_stroke()
 {

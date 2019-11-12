@@ -1,3 +1,4 @@
+ignoreModule();
 
 function PALM_stroke()
 {

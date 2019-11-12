@@ -1,3 +1,4 @@
+ignoreModule();
 
 function NORMALSTROKELUBE_stroke()
 {

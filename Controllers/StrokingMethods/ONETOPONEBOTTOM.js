@@ -1,3 +1,4 @@
+ignoreModule();
 
 function ONETOPONEBOTTOM_stroke()
 {

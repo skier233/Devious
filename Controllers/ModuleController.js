@@ -1,3 +1,4 @@
+ignoreModule();
 //region Possible Categories
 const ImplementedCategories = {
     SHORT: 'short',
@@ -86,7 +87,6 @@ function runScript(path)
         ModuleArgs = arguments.slice(1, arguments.length - 1);
     }
     run(path);
-    dm("4")
 }
 
 function chooseModule()
@@ -133,7 +133,6 @@ function moduleSelector()
     {
         if (ratings[i] == highest)
         {
-            dm("path:" + AllModules[i].FilePath);
             return AllModules[i].FilePath;
         }
     }

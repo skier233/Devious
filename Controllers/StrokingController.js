@@ -1,12 +1,8 @@
+ignoreModule();
 let TimeLeftStroking = 0;
 runScript(fp("Controllers", "StrokingMethodsController.js"));
 
-function stroke(strokeModifier)
-{
-    strokeInternal(30, 80);
-}
-
-function stroke(strokeModifier, strokingCategory, strokingMethod)
+function stroke(strokingCategory, strokingMethod, duration)
 {
     let strokingMethodToStart = null;
     if (strokingMethod != null)
@@ -15,18 +11,24 @@ function stroke(strokeModifier, strokingCategory, strokingMethod)
     }
     else if (strokingCategory != null)
     {
-        strokingMethodToStart = getStrokingMethodByCategory(strokingCategory, edgeModifier);
+        strokingMethodToStart = getStrokingMethodByCategory(false, strokingCategory);
     }
     else
     {
-        strokingMethodToStart = getStrokingMethodByName("NORMALSTROKE")
-        startEdgingBPM(70, "test edge");
+        if (getStrokingMethodsEnabled())
+        {
+            strokingMethodToStart = getStrokingMethodByCategory(false);
+        }
+        else {
+            strokingMethodToStart = getStrokingMethodByName("NORMALSTROKE");
+        }
     }
-    strokingMethodToStart.startStroking(strokeModifier)
+    return strokingMethodToStart.startStroking(null, null, duration);
 }
 
-function edge(edgeModifier, strokingCategory, strokingMethod)
+function edge(strokingCategory, strokingMethod)
 {
+    dm("edge: begin")
     let strokingMethodToStart = null;
     if (strokingMethod != null)
     {
@@ -34,35 +36,94 @@ function edge(edgeModifier, strokingCategory, strokingMethod)
     }
     else if (strokingCategory != null)
     {
-        strokingMethodToStart = getStrokingMethodByCategory(strokingCategory, edgeModifier);
+        strokingMethodToStart = getStrokingMethodByCategory(true, strokingCategory);
     }
     else
     {
-        strokingMethodToStart = getStrokingMethodByName("NORMALSTROKE")
-        startEdgingBPM(70, "test edge");
+        if (getStrokingMethodsEnabled())
+        {
+            strokingMethodToStart = getStrokingMethodByCategory(true);
+        }
+        else {
+            strokingMethodToStart = getStrokingMethodByName("NORMALSTROKE");
+        }
     }
-    strokingMethodToStart.edge(edgeModifier)
+    dm("edge: end");
+    return strokingMethodToStart.edge()
 }
 
-function Tease(teaseLength, edgeOnly, strokeOnly)
+let _teasePointsRollOver = 0;
+
+function Tease(teasePoints, edgeOnly, strokeOnly, uniqueOnly)
 {
+    dm("Tease: begin");
+    //TODO: potentially add a way so the mood doesn't change right near the end
+    // (ie. Want to avoid "I'm done doing x. Lets start doing y." and then does 1 edge with y and this method ends and goes to something else)
+    teasePoints = teasePoints - _teasePointsRollOver;
+    _teasePointsRollOver = 0;
+    let pointsSoFar = 0;
+    let edgingPercent = 50;
+    let stimulationType = "BOTH";
     if (edgeOnly)
     {
-
+        stimulationType = "EDGE";
+        edgingPercent = 100;
     }
     else if (strokeOnly)
     {
-
+        stimulationType = "STROKE";
+        edgingPercent = 0;
     }
-    else
+    while (pointsSoFar < teasePoints)
     {
-
+        dm("Points so far: " + pointsSoFar + " out of " + teasePoints);
+        if (stimulationType == "BOTH")
+        {
+            if (getStrokingMood() == "NEUTRAL")
+            {
+                edgingPercent = 65;
+            }
+            else if (getStrokingMood() == "TORTURE")
+            {
+                edgingPercent = 7;
+            }
+            else if (getStrokingMood() == "TEASE")
+            {
+                edgingPercent = 7;
+            }
+            else if (getStrokingMood() == "INTENSE")
+            {
+                edgingPercent = 70;
+            }
+            else if (getStrokingMood() == "RAPIDFIRE")
+            {
+                edgingPercent = 90;
+            }
+            //TODO: have a better way to determine whether to stroke or edge
+        }
+        if (edgingPercent == 0)
+        {
+            pointsSoFar += stroke();
+        }
+        else if (edgingPercent == 100)
+        {
+            pointsSoFar += edge();
+        }
+        else
+        {
+            dm(randomPercent() + " " + edgingPercent);
+            if (randomPercent() <= edgingPercent)
+            {
+                pointsSoFar += edge()
+            }
+            else
+            {
+                pointsSoFar += stroke();
+            }
+        }
     }
-}
-
-function startEdging()
-{
-    startEdgingBPM(3, 80);
+    _teasePointsRollOver = pointsSoFar - teasePoints;
+    dm("Tease: end");
 }
 
 function startEdgingBPM(bpm, message) {
@@ -95,10 +156,11 @@ function strokeInternal(duration, bpm, message)
     {
         sm(message, 0);
     }
+    bpm = Math.round(bpm);
     startStroking(bpm);
     let tauntFrequency = getTauntFrequency();
     let tauntIncrement = getTauntTime(tauntFrequency);
-    currentTime = getMillisPassed() / 1000;
+    let currentTime = getMillisPassed() / 1000;
     let tauntTime = tauntIncrement + currentTime;
     TimeLeftStroking = duration;
     let secThreshold = currentTime + duration;
@@ -146,20 +208,3 @@ function getTauntTime(tauntFreq)
     }
     return tauntIncrement;
 }
-
-//region Variable getters
-/**
- * getTauntFrequency getter method to get the personality variable "tauntFrequency". You probably won't want to call this
- * directly.
- **/
-function getTauntFrequency() {
-    let tauntFrequency = getVar("tauntFrequency", 3);
-    if (typeof tauntFrequency == "number") {
-        if (tauntFrequency >= 0 && tauntFrequency <= 5) {
-            return tauntFrequency;
-        }
-    }
-    //Returns 3 if the taunt frequency has not been set or is invalid
-    return 3;
-}
-//endregion

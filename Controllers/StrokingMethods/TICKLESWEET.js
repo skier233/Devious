@@ -1,3 +1,4 @@
+ignoreModule();
 
 function TICKLESWEET_stroke()
 {

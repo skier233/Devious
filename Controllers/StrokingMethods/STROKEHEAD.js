@@ -1,3 +1,4 @@
+ignoreModule();
 
 function STROKEHEAD_stroke()
 {

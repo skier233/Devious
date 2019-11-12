@@ -1,14 +1,15 @@
+ignoreModule();
 //lowest inclusive to highest inclusive
 function randomInteger(lowest, highest) {
     return Math.floor(Math.random() * (highest - lowest + 1)) + lowest;
 }
 
-function rt()
+function randomPercent()
 {
-    return random.apply(null, arguments);
+    return randomInteger(0, 100);
 }
 
-function random()
+function rt()
 {
     return random.apply(null, arguments);
 }

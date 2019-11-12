@@ -1,3 +1,4 @@
+ignoreModule();
 
 function NORMALSTROKE_stroke()
 {

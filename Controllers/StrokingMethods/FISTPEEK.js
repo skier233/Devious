@@ -1,3 +1,4 @@
+ignoreModule();
 
 function FISTPEEK_stroke()
 {

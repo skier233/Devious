@@ -1,3 +1,4 @@
+ignoreModule();
 
 function PALMRUB_stroke()
 {

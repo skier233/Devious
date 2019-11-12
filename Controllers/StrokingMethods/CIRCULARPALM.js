@@ -1,3 +1,4 @@
+ignoreModule();
 
 function CIRCULARPALM_stroke()
 {

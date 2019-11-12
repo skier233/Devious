@@ -1,3 +1,4 @@
+ignoreModule();
 
 function ROLL_stroke()
 {

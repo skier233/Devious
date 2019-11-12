@@ -1,3 +1,4 @@
+ignoreModule();
 
 function ONLYUP_stroke()
 {

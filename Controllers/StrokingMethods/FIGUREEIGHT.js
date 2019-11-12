@@ -1,3 +1,4 @@
+ignoreModule();
 
 function FIGUREEIGHT_stroke()
 {

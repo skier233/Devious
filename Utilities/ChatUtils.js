@@ -1,3 +1,4 @@
+ignoreModule();
 //This class contains utilities for the chat (and some wrappers for TAJ methods in the event this personality might want to run extra code on a chat call)
 
 //Custom/SendMessage wrapper. This is the main function you will use for any new modules that want to send a message!!
@@ -29,7 +30,7 @@ function dm(message, delay)
         DM(message);
 }
 
-/Error message wrapper
+//Error message wrapper
 function em(message, delay)
 {
     if (delay != null)

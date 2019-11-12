@@ -1,3 +1,4 @@
+ignoreModule();
 /**
  * showTaggedImageExact method will show and return a random picture with
  * the tags provided as an array

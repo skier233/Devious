@@ -1,3 +1,4 @@
+ignoreModule();
 
 function TWISTTIP_stroke()
 {

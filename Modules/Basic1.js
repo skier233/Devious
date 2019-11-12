@@ -1,4 +1,3 @@
-//Categories = medium
 main();
 function main()
 {

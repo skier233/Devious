@@ -1,3 +1,4 @@
+ignoreModule();
 
 function ONLYDOWN_stroke()
 {

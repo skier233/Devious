@@ -1,3 +1,4 @@
+ignoreModule();
 
 function HOLDTWIST_stroke()
 {
