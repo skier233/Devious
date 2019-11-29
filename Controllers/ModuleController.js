@@ -94,12 +94,16 @@ function chooseModule()
     runScript(moduleSelector());
 }
 
+//TODO: This needs work as this should be the guts of how modules are chosen for the personality
 function moduleSelector()
 {
     let ratings = [];
     let highest = -1000;
+    let highestIndex = -1;
     let secondhighest = -1000;
+    let secondhighestIndex = -1;
     let thirdhighest = -1000;
+    let thirdhighestIndex = -1;
     for(let i = 0; i < AllModules.length; i++)
     {
         let module = AllModules[i];
@@ -109,11 +113,8 @@ function moduleSelector()
             let thisCategory = module.Categories[j];
             if (!getVar(thisCategory + "DISABLED", false))
             {
-                dm("returned value: " + getVar(thisCategory + "RATING", false));
                 if (getVar(thisCategory + "RATING", false))
                 {
-                    dm("found rating value:" + getVar(thisCategory + "RATING"));
-                    dm("adjusted rating:" + RatingMapings[getVar(thisCategory + "RATING")]);
                     moduleRating += RatingMapings[getVar(thisCategory + "RATING")];
                 }
             }
@@ -125,19 +126,19 @@ function moduleSelector()
             thirdhighest = secondhighest;
             secondhighest = highest;
             highest = moduleRating;
+
+            thirdhighestIndex = secondhighestIndex;
+            secondhighestIndex = highestIndex;
+            highestIndex = i;
         }
         ratings.push(moduleRating);
     }
-
-    for(let i = 0; i < AllModules.length; i++)
+    if (highestIndex == -1)
     {
-        if (ratings[i] == highest)
-        {
-            return AllModules[i].FilePath;
-        }
+        em("No Module files with categories defined were found!!");
+        return null;
     }
-    em("No Module files with categories defined were found!!");
-    return null;
+    return AllModules[highestIndex].FilePath;
 }
 
 //endregion

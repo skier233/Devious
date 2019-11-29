@@ -2,7 +2,7 @@ ignoreModule();
 let TimeLeftStroking = 0;
 runScript(fp("Controllers", "StrokingMethodsController.js"));
 
-function stroke(strokingCategory, strokingMethod, duration)
+function stroke(strokingCategory, strokingMethod, duration, historyLength)
 {
     let strokingMethodToStart = null;
     if (strokingMethod != null)
@@ -11,13 +11,13 @@ function stroke(strokingCategory, strokingMethod, duration)
     }
     else if (strokingCategory != null)
     {
-        strokingMethodToStart = getStrokingMethodByCategory(false, strokingCategory);
+        strokingMethodToStart = getStrokingMethodByCategory(false, strokingCategory, historyLength);
     }
     else
     {
         if (getStrokingMethodsEnabled())
         {
-            strokingMethodToStart = getStrokingMethodByCategory(false);
+            strokingMethodToStart = getStrokingMethodByCategory(false, null, historyLength);
         }
         else {
             strokingMethodToStart = getStrokingMethodByName("NORMALSTROKE");
@@ -26,9 +26,8 @@ function stroke(strokingCategory, strokingMethod, duration)
     return strokingMethodToStart.startStroking(null, null, duration);
 }
 
-function edge(strokingCategory, strokingMethod)
+function edge(strokingCategory, strokingMethod, historyLength)
 {
-    dm("edge: begin")
     let strokingMethodToStart = null;
     if (strokingMethod != null)
     {
@@ -36,25 +35,24 @@ function edge(strokingCategory, strokingMethod)
     }
     else if (strokingCategory != null)
     {
-        strokingMethodToStart = getStrokingMethodByCategory(true, strokingCategory);
+        strokingMethodToStart = getStrokingMethodByCategory(true, strokingCategory, historyLength);
     }
     else
     {
         if (getStrokingMethodsEnabled())
         {
-            strokingMethodToStart = getStrokingMethodByCategory(true);
+            strokingMethodToStart = getStrokingMethodByCategory(true, null, historyLength);
         }
         else {
             strokingMethodToStart = getStrokingMethodByName("NORMALSTROKE");
         }
     }
-    dm("edge: end");
     return strokingMethodToStart.edge()
 }
 
 let _teasePointsRollOver = 0;
 
-function Tease(teasePoints, edgeOnly, strokeOnly, uniqueOnly)
+function Tease(teasePoints, edgeOnly, strokeOnly, historyLength)
 {
     dm("Tease: begin");
     //TODO: potentially add a way so the mood doesn't change right near the end
@@ -64,6 +62,8 @@ function Tease(teasePoints, edgeOnly, strokeOnly, uniqueOnly)
     let pointsSoFar = 0;
     let edgingPercent = 50;
     let stimulationType = "BOTH";
+    if (historyLength == null)
+        historyLength = 3;
     if (edgeOnly)
     {
         stimulationType = "EDGE";
@@ -74,7 +74,7 @@ function Tease(teasePoints, edgeOnly, strokeOnly, uniqueOnly)
         stimulationType = "STROKE";
         edgingPercent = 0;
     }
-    while (pointsSoFar < teasePoints)
+    while (pointsSoFar < teasePoints * 0.9)
     {
         dm("Points so far: " + pointsSoFar + " out of " + teasePoints);
         if (stimulationType == "BOTH")
@@ -103,22 +103,22 @@ function Tease(teasePoints, edgeOnly, strokeOnly, uniqueOnly)
         }
         if (edgingPercent == 0)
         {
-            pointsSoFar += stroke();
+            pointsSoFar += stroke(null, null, null, historyLength);
         }
         else if (edgingPercent == 100)
         {
-            pointsSoFar += edge();
+            pointsSoFar += edge(null, null, historyLength);
         }
         else
         {
             dm(randomPercent() + " " + edgingPercent);
             if (randomPercent() <= edgingPercent)
             {
-                pointsSoFar += edge()
+                pointsSoFar += edge(null, null, historyLength)
             }
             else
             {
-                pointsSoFar += stroke();
+                pointsSoFar += stroke(null, null, null, historyLength);
             }
         }
     }

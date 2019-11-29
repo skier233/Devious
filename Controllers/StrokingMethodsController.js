@@ -154,6 +154,9 @@ StrokingMethod.prototype.edge = function(strokeCategory, specifiedBpm) {
     let tenPercent = bpm*0.1;
     bpm = bpm + randomInteger(0 - tenPercent, tenPercent);
     let edgeStat = addEdgeStat();
+    let strList = edgeStat.getData("str", 1);
+    strList.add(this.Name);
+    dm(sessionStatistics.toString());
     startEdgingBPM(bpm, message);
     let returnPoints = this.getEdgePoints();
     dm(this.Name + " Edge Points " + returnPoints);
@@ -309,7 +312,7 @@ function getStrokingMethodByName(name)
     return null;
 }
 
-function getStrokingMethodByCategory(edging, strokingCategory)
+function getStrokingMethodByCategory(edging, strokingCategory, historyLength)
 {
     let list = null;
     if (strokingCategory == null)
@@ -367,10 +370,58 @@ function getStrokingMethodByCategory(edging, strokingCategory)
     }
     let level = getStrokingLevel();
     let index = ((level / 100) * list.length) - 1;
-    return list[index];
-}
-
-function getRandomStrokingMethod()
-{
-    return AllMethods[randomInteger(0, AllMethods.length - 1)];
+    let toReturn = list[index];
+    let reachedTop = false;
+    let reachedBottom = false;
+    if (historyLength != null) {
+        let goingUp = (randomInteger(0, 1) == 1);
+        //get edge history here once instead of calling it every time inside isEdgeInHistory for efficiency sake
+        let edgeHistory = sessionStatistics.getEdges();
+        dm("edge history: " + edgeHistory);
+        while (isEdgeInHistory(list[index].Name, historyLength, edgeHistory))
+        {
+            if (goingUp)
+            {
+                if (index + 1 >= list.length)
+                {
+                    reachedTop = true;
+                    if (reachedBottom)
+                    {
+                        wm("No unique stroking method found in " + strokingCategory + " with historySize " + historyLength + ". This means the history size is greater than the number of stroking methods in the category!");
+                        return list[randomInteger(0, list.length - 1)];
+                    }
+                    else
+                    {
+                        goingUp = false;
+                    }
+                }
+                else
+                {
+                    index = index + 1;
+                }
+            }
+            else
+            {
+                if (index - 1 < 0)
+                {
+                    reachedBottom = true;
+                    if (reachedTop)
+                    {
+                        wm("No unique stroking method found in " + strokingCategory + " with historySize " + historyLength + ". This means the history size is greater than the number of stroking methods in the category!");
+                        return list[randomInteger(0, list.length - 1)];
+                    }
+                    else
+                    {
+                        goingUp = true;
+                    }
+                }
+                else
+                {
+                    index = index - 1;
+                }
+            }
+        }
+        toReturn = list[index];
+    }
+    return toReturn;
 }

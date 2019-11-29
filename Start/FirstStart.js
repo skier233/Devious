@@ -88,3 +88,4 @@ if (setUpNow.isLike("now"))
 //endregion
 
 run(fp("SubModules", "DommeFirstMeeting.js"));
+setVar("firstSessionDone", true);
