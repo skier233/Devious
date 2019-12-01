@@ -193,6 +193,7 @@ StrokingMethod.prototype.getEdgePoints = function() {
 }
 
 let AllMethods = [];
+let AllMethodsEdge = [];
 let teaseMethods = [];
 let tortureMethods = [];
 let intenseMethods = [];
@@ -284,6 +285,7 @@ function initializeMethods()
     tortureMethods.push(AllMethods[30]);
     AllMethods.push(new StrokingMethod("ONEFINGER", 1, 9, 1, 0));
     teaseMethods.push(AllMethods[31]);
+    AllMethods.sort((a, b) => (a.getStrokePoints() > b.getStrokePoints()) ? 1 : -1);
     teaseMethods.sort((a, b) => (a.getStrokePoints() > b.getStrokePoints()) ? 1 : -1);
     tortureMethods.sort((a, b) => (a.getStrokePoints() > b.getStrokePoints()) ? 1 : -1);
     intenseMethods.sort((a, b) => (a.getStrokePoints() > b.getStrokePoints()) ? 1 : -1);
@@ -294,6 +296,8 @@ function initializeMethods()
     tortureMethodsEdge = tortureMethods.slice(0);
     intenseMethodsEdge = intenseMethods.slice(0);
     rapidFireMethodsEdge = rapidFireMethods.slice(0);
+    AllMethodsEdge = AllMethods.slice(0);
+    AllMethodsEdge.sort((a, b) => (a.getEdgePoints() > b.getEdgePoints()) ? 1 : -1);
     teaseMethodsEdge.sort((a, b) => (a.getEdgePoints() > b.getEdgePoints()) ? 1 : -1);
     tortureMethodsEdge.sort((a, b) => (a.getEdgePoints() > b.getEdgePoints()) ? 1 : -1);
     intenseMethodsEdge.sort((a, b) => (a.getEdgePoints() > b.getEdgePoints()) ? 1 : -1);
@@ -363,6 +367,17 @@ function getStrokingMethodByCategory(edging, strokingCategory, historyLength)
             list = rapidFireMethods;
         }
     }
+    else if (strokingCategory == "ALL")
+    {
+        if (edging)
+        {
+            list = AllMethodsEdge;
+        }
+        else
+        {
+            list = AllMethods;
+        }
+    }
     else
     {
         em("Stroking Category: " + strokingCategory + " is not recognized as a valid stroking category");
@@ -374,7 +389,7 @@ function getStrokingMethodByCategory(edging, strokingCategory, historyLength)
     let reachedTop = false;
     let reachedBottom = false;
     if (historyLength != null) {
-        let goingUp = (randomInteger(0, 1) == 1);
+        let goingUp = (randomInteger(0, 1) === 1);
         //get edge history here once instead of calling it every time inside isEdgeInHistory for efficiency sake
         let edgeHistory = sessionStatistics.getEdges();
         dm("edge history: " + edgeHistory);
