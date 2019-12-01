@@ -1,4 +1,28 @@
 ignoreModule();
+
+let ModuleArgs = [];
+
+//Used as an alternative to run() to call scripts. This should be used instead
+//because it allows a way of passing arguments to scripts.
+function runScript(path)
+{
+    if (path == null)
+    {
+        em("runScript called with no arguments!!");
+        return;
+    }
+    if (arguments.length == 1)
+    {
+        ModuleArgs = [];
+    }
+    else
+    {
+        ModuleArgs = arguments.slice(1, arguments.length - 1);
+    }
+    run(path);
+}
+
+//TODO: possibly all of this category logic needs to be removed
 //region Possible Categories
 const ImplementedCategories = {
     SHORT: 'short',
@@ -20,6 +44,25 @@ setVar("MEDIUMRATING", 5);
 setVar("LONGRATING", 5);
 setVar("VERYLONGRATING", 5);
 
+//endregion
+
+//region Activity
+function Activity(filepath, Name)
+{
+    this.FilePath = filepath;
+    this.Name = Name;
+    this.StartFunction = null;
+}
+let AllActivities = [];
+
+function loadAllActivities()
+{
+    let thisActivity = new Activity(fp("Activities", "Edging.js"), "Edging");
+    runScript(thisActivity.FilePath);
+    thisActivity.StartFunction = edging_activity;
+    AllActivities.push(thisActivity);
+}
+loadAllActivities();
 //endregion
 
 //region Module implementation
@@ -67,31 +110,11 @@ function loadAvailableModules()
 
 //region Module Running
 
-let ModuleArgs = [];
-
-//Used as an alternative to run() to call scripts. This should be used instead
-//because it allows a way of passing arguments to scripts.
-function runScript(path)
-{
-    if (path == null)
-    {
-        em("runScript called with no arguments!!");
-        return;
-    }
-    if (arguments.length == 1)
-    {
-        ModuleArgs = [];
-    }
-    else
-    {
-        ModuleArgs = arguments.slice(1, arguments.length - 1);
-    }
-    run(path);
-}
-
 function chooseModule()
 {
-    runScript(moduleSelector());
+    let thisActivity = AllActivities[randomInteger(0, AllActivities.length)];
+    thisActivity.StartFunction(50);
+    //runScript(activitySelector());
 }
 
 //TODO: This needs work as this should be the guts of how modules are chosen for the personality
@@ -139,6 +162,12 @@ function moduleSelector()
         return null;
     }
     return AllModules[highestIndex].FilePath;
+}
+
+//This is the replacement to moduleSelector that uses activities instead of modules
+function activitySelector()
+{
+
 }
 
 //endregion
