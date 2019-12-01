@@ -1,4 +1,4 @@
-addResponseIndicator("at the edge", "im close", "im there");
+addResponseIndicator("at the edge", "im close", "im there", "on the edge");
 
 function imCloseResponse(message) {
     dm("ImClose: BeginningResponse");

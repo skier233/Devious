@@ -7,7 +7,7 @@ let TeaseAI = Java.type("me.goddragon.teaseai.TeaseAI");
 let PersonalityPath = TeaseAI.application.getSession().getActivePersonality().getFolder().getAbsolutePath().replace("\\", separator);
 let TeasePath = Java.type("me.goddragon.teaseai.utils.FileUtils").getTAJPath().replace("\\", separator);
 
-//region File Path formatting
+//region File Path formatting & script running
 //Concatenates the arguments into one path accounting for different operating systems.
 //If the first argument is a bool and is true, then the personality path will be added at the beginning. If it is false,
 //The TeasePath will be used
@@ -40,6 +40,27 @@ function fp()
     return formatPath.apply(null, arguments);
 }
 
+let ScriptArgs = [];
+
+//Used as an alternative to run() to call scripts. This should be used instead
+//because it allows a way of passing arguments to scripts.
+function runScript(path)
+{
+    if (path == null)
+    {
+        em("runScript called with no arguments!!");
+        return;
+    }
+    if (arguments.length == 1)
+    {
+        ScriptArgs = [];
+    }
+    else
+    {
+        ScriptArgs = arguments.slice(1, arguments.length - 1);
+    }
+    run(path);
+}
 
 //endregion
 

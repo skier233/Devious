@@ -392,7 +392,7 @@ function getStrokingMethodByCategory(edging, strokingCategory, historyLength)
         let goingUp = (randomInteger(0, 1) === 1);
         //get edge history here once instead of calling it every time inside isEdgeInHistory for efficiency sake
         let edgeHistory = sessionStatistics.getEdges();
-        dm("edge history: " + edgeHistory);
+        dm("List: " + list.toString() + " index:" + index);
         while (isEdgeInHistory(list[index].Name, historyLength, edgeHistory))
         {
             if (goingUp)
