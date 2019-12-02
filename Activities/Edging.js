@@ -57,6 +57,10 @@ function edge_transition(nextFetish)
     {
         sm("I don't think that's enough edging yet %grin%");
     }
+    else if (nextFetish === "Stroking")
+    {
+        sm("I think I've let you get too close to the orgasm you crave. It's time to go back to stroking.");
+    }
 }
 
 

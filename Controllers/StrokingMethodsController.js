@@ -90,6 +90,10 @@ StrokingMethod.prototype.startStroking = function(strokeCategory, specifiedBpm, 
     if (duration == null)
         duration = strokeModifier*10;
     //TODO: use better method of getting stroke length using mood, stroking preference
+
+    let strokeStat = addStrokeStat();
+    let strList = strokeStat.getData("str", 1);
+    strList.add(this.Name);
     strokeInternal(duration, bpm, message);
     let returnPoints = this.getStrokePoints() * (duration / 60);
     registerStrokePoints(returnPoints);
@@ -156,7 +160,6 @@ StrokingMethod.prototype.edge = function(strokeCategory, specifiedBpm) {
     let edgeStat = addEdgeStat();
     let strList = edgeStat.getData("str", 1);
     strList.add(this.Name);
-    dm(sessionStatistics.toString());
     startEdgingBPM(bpm, message);
     let returnPoints = this.getEdgePoints();
     dm(this.Name + " Edge Points " + returnPoints);
@@ -318,6 +321,7 @@ function getStrokingMethodByName(name)
 
 function getStrokingMethodByCategory(edging, strokingCategory, historyLength)
 {
+    dm("inside");
     let list = null;
     if (strokingCategory == null)
     {
@@ -391,9 +395,17 @@ function getStrokingMethodByCategory(edging, strokingCategory, historyLength)
     if (historyLength != null) {
         let goingUp = (randomInteger(0, 1) === 1);
         //get edge history here once instead of calling it every time inside isEdgeInHistory for efficiency sake
-        let edgeHistory = sessionStatistics.getEdges();
+        let thisHistory = null;
+        if (edging)
+        {
+            thisHistory = sessionStatistics.getEdges();
+        }
+        else
+        {
+            thisHistory = sessionStatistics.getStrokes();
+        }
         dm("List: " + list.toString() + " index:" + index);
-        while (isEdgeInHistory(list[index].Name, historyLength, edgeHistory))
+        while (isInHistory(edging, list[index].Name, historyLength, thisHistory))
         {
             if (goingUp)
             {

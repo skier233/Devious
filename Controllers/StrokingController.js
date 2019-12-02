@@ -1,6 +1,5 @@
 ignoreModule();
 let TimeLeftStroking = 0;
-runScript(fp("Controllers", "StrokingMethodsController.js"));
 
 function stroke(strokingCategory, strokingMethod, duration, historyLength)
 {
@@ -24,30 +23,6 @@ function stroke(strokingCategory, strokingMethod, duration, historyLength)
         }
     }
     return strokingMethodToStart.startStroking(null, null, duration);
-}
-
-function edge(strokingCategory, strokingMethod, historyLength)
-{
-    let strokingMethodToStart = null;
-    if (strokingMethod != null)
-    {
-        strokingMethodToStart = getStrokingMethodByName(strokingMethod)
-    }
-    else if (strokingCategory != null)
-    {
-        strokingMethodToStart = getStrokingMethodByCategory(true, strokingCategory, historyLength);
-    }
-    else
-    {
-        if (getStrokingMethodsEnabled())
-        {
-            strokingMethodToStart = getStrokingMethodByCategory(true, null, historyLength);
-        }
-        else {
-            strokingMethodToStart = getStrokingMethodByName("NORMALSTROKE");
-        }
-    }
-    return strokingMethodToStart.edge()
 }
 
 let _teasePointsRollOver = 0;

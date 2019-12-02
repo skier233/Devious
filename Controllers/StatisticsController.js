@@ -21,7 +21,38 @@ function isEdgeInHistory(edgeName, historyLength, edgeHistory)
     return false;
 }
 
+function isStrokeInHistory(strokeName, historyLength, strokeHistory)
+{
+    if (strokeHistory == null)
+        strokeHistory = sessionStatistics.getStrokes();
+    strokeHistory = getLastXItemsInList(strokeHistory, historyLength);
+    for(let i = 0; i < strokeHistory.size(); i++)
+    {
+        let strList = strokeHistory.get(i).getData("str", 1);
+        if (strList != null && strList.size() != 0)
+        {
+            dm("1: " + strList.get(0).toLowerCase() + " 1:" + strokeName.toLowerCase());
+        }
 
+        if (strList != null && strList.size() != 0 && strList.get(0).toLowerCase().equals(strokeName.toLowerCase()))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+function isInHistory(edge, name, historyLength, history)
+{
+    if (edge)
+    {
+        return isEdgeInHistory(name, historyLength, history);
+    }
+    else
+    {
+        return isStrokeInHistory(name, historyLength, history);
+    }
+}
 
 
 

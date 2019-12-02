@@ -20,10 +20,22 @@ function loadAllActivities()
     thisActivity.StartFunction = edging_activity;
     AllActivities.push(thisActivity);
     MainLoopActivities.push(thisActivity);
+
     thisActivity = new Activity(fp("Activities", "End.js"), "End");
     runScript(thisActivity.FilePath);
     thisActivity.StartFunction = end_activity;
     AllActivities.push(thisActivity);
+
+    thisActivity = new Activity(fp("Activities", "Start.js"), "Start");
+    runScript(thisActivity.FilePath);
+    thisActivity.StartFunction = start_activity;
+    AllActivities.push(thisActivity);
+
+    thisActivity = new Activity(fp("Activities", "Stroking.js"), "Stroking");
+    runScript(thisActivity.FilePath);
+    thisActivity.StartFunction = stroking_activity;
+    AllActivities.push(thisActivity);
+    MainLoopActivities.push(thisActivity);
 }
 loadAllActivities();
 //endregion
@@ -46,24 +58,26 @@ function chooseActivity()
 
 function continueSession()
 {
-    return sessionPoints < 50;
+    return sessionPoints < 200;
 }
 
 function normalSession()
 {
     if (!isVar("firstSessionDone"))
     {
-        runScript(fp("Start", "FirstStart.js"))
+        runScript(fp("Activities", "FirstStart.js"))
         dm("5")
     }
     else
     {
         //run start
+        start_activity(0);
     }
     while (continueSession())
     {
         //TODO: transition from previous module to next
         chooseActivity();
+        dm("Session Points: " + sessionPoints);
     }
     sessionPoints += end_activity(30);
     //run end file

@@ -2,78 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cc2ddb1-b16c-4b21-b76e-1209d97b51c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Activities/End.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Start/Start.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Activities/Stroking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Activities/Edging.js" beforeDir="false" afterPath="$PROJECT_DIR$/Activities/Edging.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ModuleController.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/SessionController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/SessionController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/StatisticsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StatisticsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/StrokingController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/StrokingMethodsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StrokingMethodsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModuleIdeas.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Basic1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Basic2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Basic3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Basic4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Basic5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Mod03.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Mod04.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Mod05.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Mod06.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Mod07.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Mod08.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Mod09.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Mod10.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Tease1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Responses/ImClose.js" beforeDir="false" afterPath="$PROJECT_DIR$/Responses/ImClose.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/apathylevel.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/calledslut.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/debug.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/maxholdinglength.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/maxsessionlength.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/maxstrokinglength.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodcircularpalmmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodfigureeightmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodfingersteasemethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodfistpeekmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodholdstrokeheadmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodholdstrokemethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodholdstroketipmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodholdtwistheadmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodholdtwistmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodholdtwisttipmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodnormalstrokingbothhandslubemethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodnormalstrokinglubemethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodnormalstrokingmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodonefingermethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodonehandtoponehandbottommethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodonlydowncirclemethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodonlydownmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodonlyupcirclemethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodonlyupmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodpalmmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodpalmrubmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodrollingmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodrubsweetspotmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodstomachrubmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodstrokeheadmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodstroketipmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodstrokeunderleglubemethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodstrokeunderlegmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodticklesweetspotmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodtwistcirclemethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodtwistheadmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodtwistmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/methodtwisttipmethod.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/minholdinglength.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/minsessionlength.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/minstrokinglength.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/orgasmchance.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/rapidtesting.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/ruinchance.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/stopdownloading.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/tauntfrequency.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Variables/waitingisnotmystrongsuit.var" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilities/FileUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/FileUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Start/FirstStart.js" beforeDir="false" afterPath="$PROJECT_DIR$/Activities/FirstStart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Start/Start.js" beforeDir="false" afterPath="$PROJECT_DIR$/Activities/Start.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/personality.properties" beforeDir="false" afterPath="$PROJECT_DIR$/personality.properties" afterDir="false" />
     </list>
@@ -91,44 +28,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controllers/SessionController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Start/Start.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            <state relative-caret-position="731">
+              <caret line="64" column="1" lean-forward="true" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Activities/End.js">
+        <entry file="file://$PROJECT_DIR$/Activities/Stroking.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Mischevious/Structure/End/End_1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="5" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controllers/StrokingController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="50" column="1" lean-forward="true" selection-start-line="28" selection-end-line="50" selection-end-column="1" />
+            <state relative-caret-position="187">
+              <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -136,8 +46,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controllers/StrokingMethodsController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="370" column="5" lean-forward="true" selection-start-line="370" selection-start-column="5" selection-end-line="370" selection-end-column="5" />
+            <state relative-caret-position="986">
+              <caret line="400" column="43" selection-start-line="400" selection-start-column="26" selection-end-line="400" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Activities/Start.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controllers/StrokingController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="92" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controllers/StatisticsController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" selection-start-column="4" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -152,33 +98,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utilities/FileUtils.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#499#545#0" />
-                <element signature="e#1428#1465#0" />
-                <element signature="e#2205#2221#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Activities/Edging.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1286">
-              <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
+            <state relative-caret-position="997">
+              <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -196,6 +119,7 @@
     <findStrings>
       <find>StartStrokingMethodScript</find>
       <find>4</find>
+      <find>edgeName</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -204,7 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Utilities/PictureUtils.js" />
         <option value="$PROJECT_DIR$/SubModules/DommeFirstMeeting.js" />
         <option value="$PROJECT_DIR$/StrokeTaunts/StrokeTaunt1.js" />
         <option value="$PROJECT_DIR$/StrokeTaunts/StrokeTaunt2.js" />
@@ -241,20 +164,21 @@
         <option value="$PROJECT_DIR$/Controllers/StrokingMethods/TWISTTIP.js" />
         <option value="$PROJECT_DIR$/Controllers/StrokingMethods/UNDERLEG.js" />
         <option value="$PROJECT_DIR$/Controllers/StrokingMethods/UNDERLEGLUBE.js" />
-        <option value="$PROJECT_DIR$/Controllers/StatisticsController.js" />
-        <option value="$PROJECT_DIR$/Controllers/StrokingController.js" />
         <option value="$PROJECT_DIR$/Start/FirstStart.js" />
         <option value="$PROJECT_DIR$/Controllers/Activities/Tease.js" />
         <option value="$PROJECT_DIR$/Responses/ImClose.js" />
         <option value="$PROJECT_DIR$/Controllers/ModuleController.js" />
         <option value="$PROJECT_DIR$/Controllers/ActivityController.js" />
         <option value="$PROJECT_DIR$/Utilities/FileUtils.js" />
-        <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/Activities/Edging.js" />
         <option value="$PROJECT_DIR$/Activities/End.js" />
-        <option value="$PROJECT_DIR$/Controllers/StrokingMethodsController.js" />
-        <option value="$PROJECT_DIR$/Controllers/SessionController.js" />
         <option value="$PROJECT_DIR$/Start/Start.js" />
+        <option value="$PROJECT_DIR$/Controllers/StatisticsController.js" />
+        <option value="$PROJECT_DIR$/Controllers/StrokingController.js" />
+        <option value="$PROJECT_DIR$/Activities/Edging.js" />
+        <option value="$PROJECT_DIR$/Controllers/SessionController.js" />
+        <option value="$PROJECT_DIR$/Activities/Stroking.js" />
+        <option value="$PROJECT_DIR$/Controllers/StrokingMethodsController.js" />
+        <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
   </component>
@@ -293,11 +217,6 @@
             <path>
               <item name="Devious" type="b2602c69:ProjectViewProjectNode" />
               <item name="Devious" type="462c0819:PsiDirectoryNode" />
-              <item name="Start" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Devious" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Devious" type="462c0819:PsiDirectoryNode" />
               <item name="Utilities" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -315,6 +234,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tyler\Desktop\Coding\Testing\test\alteringTeaseAI\Personalities\Devious\Activities" />
       <recent name="C:\Users\tyler\Desktop\Coding\Testing\test\alteringTeaseAI\Personalities\Devious" />
       <recent name="C:\Users\tyler\Desktop\Coding\Testing\test\alteringTeaseAI\Personalities\Devious\Controllers" />
     </key>
@@ -352,7 +272,7 @@
       <workItem from="1574294692543" duration="16043000" />
       <workItem from="1574788907187" duration="6320000" />
       <workItem from="1575046421894" duration="3649000" />
-      <workItem from="1575159604985" duration="21325000" />
+      <workItem from="1575159604985" duration="28147000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1571702656144</created>
@@ -417,11 +337,18 @@
       <option name="project" value="LOCAL" />
       <updated>1575172549849</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="redoing module system with new Activity system">
+      <created>1575239428097</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575239428097</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125396000" />
+    <option name="totallyTimeSpent" value="132218000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -484,27 +411,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="redoing module system with new Activity system" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Controllers/StrokingMethods/FISTPEEK.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/StrokingMethods/HOLDSTROKE.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/StrokingMethods/HOLDSTROKEHEAD.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controllers/StrokingMethods/HOLDSTROKETIP.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -700,13 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/StatisticsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="86" selection-start-line="12" selection-start-column="86" selection-end-line="12" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Modules/Tease1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -721,7 +620,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Start/FirstStart.js">
+    <entry file="file://$PROJECT_DIR$/Activities/FirstStart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1150">
           <caret line="90" column="33" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
@@ -755,31 +654,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/StrokingController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="1" lean-forward="true" selection-start-line="28" selection-end-line="50" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Mischevious/Structure/End/End_1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="5" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Activities/Edging.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1286">
-          <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -795,27 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/MoodController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/StrokingMethodsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="370" column="5" lean-forward="true" selection-start-line="370" selection-start-column="5" selection-end-line="370" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/SessionController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Activities/End.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -823,10 +680,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Start/Start.js">
+    <entry file="file://$PROJECT_DIR$/Controllers/MoodController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="17">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Activities/Start.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/VariablesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/StrokingController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Activities/Edging.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="997">
+          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utilities/MathUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/SessionController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="64" column="1" lean-forward="true" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Activities/Stroking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/StrokingMethodsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="400" column="43" selection-start-line="400" selection-start-column="26" selection-end-line="400" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/StatisticsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
