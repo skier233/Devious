@@ -7,5 +7,5 @@ function UNDERLEGLUBE_stroke()
 
 function UNDERLEGLUBE_edge()
 {
-    return "Start stroking your %cock% from under your leg with lube %untilEdge%";
+    return "Start stroking your %cock% from under your leg with lube ^untilEdge^";
 }

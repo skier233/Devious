@@ -7,5 +7,5 @@ function PALM_stroke()
 
 function PALM_edge()
 {
-    return "Start palming your %cock% with lube %untilEdge%";
+    return "Start palming your %cock% with lube ^untilEdge^";
 }

@@ -33,6 +33,7 @@ function simpleEdgeUnique(points, historyLength = 3)
         pointsSoFar += edge(null, null, historyLength);
         end_edge();
     }
+    leftOverEdgePoints = pointsSoFar - points;
     return pointsSoFar;
 }
 
@@ -44,7 +45,7 @@ function end_edge()
 //A simple edge end that just tells the sub to stop stroking
 function end_edge_1()
 {
-    sm("%StopStrokingEdge%");
+    sm("^StopStrokingEdge^");
 }
 
 function edge_inner_transition(){

@@ -7,5 +7,5 @@ function FINGERSTEASE_stroke()
 
 function FINGERSTEASE_edge()
 {
-    return "%startEdging% by teasing the head of your %cock% with lube with your fingers on all sides of the head, going up and down";
+    return "^startEdging^ by teasing the head of your %cock% with lube with your fingers on all sides of the head, going up and down";
 }

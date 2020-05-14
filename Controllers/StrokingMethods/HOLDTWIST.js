@@ -7,5 +7,5 @@ function HOLDTWIST_stroke()
 
 function HOLDTWIST_edge()
 {
-    return "%startEdging% by holding down the skin of your %cock% and twisting the shaft with the other with lube";
+    return "^startEdging^ by holding down the skin of your %cock% and twisting the shaft with the other with lube";
 }

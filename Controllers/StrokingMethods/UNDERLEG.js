@@ -7,5 +7,5 @@ function UNDERLEG_stroke()
 
 function UNDERLEG_edge()
 {
-    return "Start stroking your %cock% from under your leg %untilEdge%";
+    return "Start stroking your %cock% from under your leg ^untilEdge^";
 }

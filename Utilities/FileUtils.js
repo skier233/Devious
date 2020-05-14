@@ -14,25 +14,31 @@ let TeasePath = Java.type("me.goddragon.teaseai.utils.FileUtils").getTAJPath().r
 function formatPath() {
     let outputPath = "";
     let startVar = 0;
-    if (arguments.length != 0 && arguments[0] == true)
+    if (arguments.length !== 0 && arguments[0] === true)
     {
         outputPath = PersonalityPath + separator;
         startVar = 1;
     }
-    else if (arguments.length != 0 && arguments[0] == false)
+    else if (arguments.length !== 0 && arguments[0] === false)
     {
         outputPath = TeasePath + separator;
         startVar = 1;
     }
     for (let i = startVar; i < arguments.length; i++)
     {
-        if (i != startVar)
+        if (i !== startVar)
         {
             outputPath += separator;
         }
         outputPath += arguments[i].toString();
     }
     return outputPath.toString();
+}
+
+function fileExists(path)
+{
+    let thisFile = new File(path);
+    return thisFile.exists();
 }
 
 function fp()
@@ -51,7 +57,7 @@ function runScript(path)
         em("runScript called with no arguments!!");
         return;
     }
-    if (arguments.length == 1)
+    if (arguments.length === 1)
     {
         ScriptArgs = [];
     }
@@ -102,7 +108,7 @@ function readCategories(file)
 {
     if (file == null)
     {
-        wm("File to read category from was null!")
+        wm("File to read category from was null!");
         return null;
     }
     try {
@@ -113,7 +119,7 @@ function readCategories(file)
             return null;
         }
         line = line.split("=")[1];
-        categories = line.split(",")
+        categories = line.split(",");
         for (let i = 0; i < categories.length; i++)
         {
             categories[i] = categories[i].trim().toUpperCase();

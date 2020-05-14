@@ -7,7 +7,7 @@ function StrokingMethod(name, startStrokingMethodScript, intensity, tease, tortu
     this.Tease = tease;
     this.Torture = torture;
     this.Closeness = closeness;
-    if (useLube == null || useLube == undefined)
+    if (useLube == null)
     {
         this.UseLube = false;
         return this;
@@ -42,19 +42,19 @@ StrokingMethod.prototype.startStroking = function(strokeCategory, specifiedBpm, 
     else if (strokeCategory != null)
     {
         //TODO: add neutral stroking mood
-        if (strokeCategory == "INTENSE")
+        if (strokeCategory === "INTENSE")
         {
             bpm = intensityBpms[strokeModifier - 1];
         }
-        else if (strokeCategory == "TEASE")
+        else if (strokeCategory === "TEASE")
         {
             bpm = teaseBpms[strokeModifier - 1];
         }
-        else if (strokeCategory == "TORTURE")
+        else if (strokeCategory === "TORTURE")
         {
             bpm = tortureBpms[strokeModifier - 1];
         }
-        else if (strokeCategory == "RAPIDFIRE")
+        else if (strokeCategory === "RAPIDFIRE")
         {
             bpm = rapidFireBpms[strokeModifier - 1];
         }
@@ -119,19 +119,19 @@ StrokingMethod.prototype.edge = function(strokeCategory, specifiedBpm) {
     else if (strokeCategory != null)
     {
         //TODO: add neutral stroking mood
-        if (strokeCategory == "INTENSE")
+        if (strokeCategory === "INTENSE")
         {
             bpm = intensityBpms[edgeModifier - 1];
         }
-        else if (strokeCategory == "TEASE")
+        else if (strokeCategory === "TEASE")
         {
             bpm = teaseBpms[edgeModifier - 1];
         }
-        else if (strokeCategory == "TORTURE")
+        else if (strokeCategory === "TORTURE")
         {
             bpm = tortureBpms[edgeModifier - 1];
         }
-        else if (strokeCategory == "RAPIDFIRE")
+        else if (strokeCategory === "RAPIDFIRE")
         {
             bpm = rapidFireBpms[edgeModifier - 1];
         }
@@ -174,7 +174,7 @@ StrokingMethod.prototype.getStrokePoints = function() {
     let tortureModifier = 3;
     let closeModifier = 1.5;
     return this.Intensity*intensityModifier + this.Tease*teaseModifier + this.Torture*tortureModifier + this.Closeness*closeModifier;
-}
+};
 
 //For more information about where these values come from, see StrokePointsCalculations.xlsx
 StrokingMethod.prototype.getEdgePoints = function() {
@@ -193,7 +193,7 @@ StrokingMethod.prototype.getEdgePoints = function() {
         closeModifier = 2.5;
     }
     return this.Intensity*intensityModifier + this.Tease*teaseModfiier + this.Torture*tortureModifier + (useInverseClose ? this.Closeness*closeModifier: (10 - this.Closeness)*closeModifier);
-}
+};
 
 let AllMethods = [];
 let AllMethodsEdge = [];
@@ -252,7 +252,7 @@ function initializeMethods()
     rapidFireMethods.push(AllMethods[15]);
     AllMethods.push(new StrokingMethod("HOLDSTROKETIP", 8, 4, 7, 4, true));
     tortureMethods.push(AllMethods[16]);
-    AllMethods.push(new StrokingMethod("RUBSWEET", 2, 3, 0, 7, true))
+    AllMethods.push(new StrokingMethod("RUBSWEET", 2, 3, 0, 7, true));
     rapidFireMethods.push(AllMethods[17]);
     AllMethods.push(new StrokingMethod("TICKLESWEET", 1, 7, 0, 2, true));
     teaseMethods.push(AllMethods[18]);
@@ -311,7 +311,7 @@ function getStrokingMethodByName(name)
 {
     for (var i = 0; i < AllMethods.length; i++)
     {
-        if (AllMethods[i].Name == name)
+        if (AllMethods[i].Name === name)
         {
             return AllMethods[i];
         }
@@ -327,7 +327,7 @@ function getStrokingMethodByCategory(edging, strokingCategory, historyLength)
     {
         strokingCategory = getStrokingMood();
     }
-    if (strokingCategory == "INTENSE")
+    if (strokingCategory === "INTENSE")
     {
         if (edging)
         {
@@ -338,7 +338,7 @@ function getStrokingMethodByCategory(edging, strokingCategory, historyLength)
             list = intenseMethods;
         }
     }
-    else if (strokingCategory == "TEASE")
+    else if (strokingCategory === "TEASE")
     {
         if (edging)
         {
@@ -349,7 +349,7 @@ function getStrokingMethodByCategory(edging, strokingCategory, historyLength)
             list = teaseMethods;
         }
     }
-    else if (strokingCategory == "TORTURE")
+    else if (strokingCategory === "TORTURE")
     {
         if (edging)
         {
@@ -360,7 +360,7 @@ function getStrokingMethodByCategory(edging, strokingCategory, historyLength)
             list = tortureMethods;
         }
     }
-    else if (strokingCategory == "RAPIDFIRE")
+    else if (strokingCategory === "RAPIDFIRE")
     {
         if (edging)
         {
@@ -371,7 +371,7 @@ function getStrokingMethodByCategory(edging, strokingCategory, historyLength)
             list = rapidFireMethods;
         }
     }
-    else if (strokingCategory == "ALL")
+    else if (strokingCategory === "ALL")
     {
         if (edging)
         {
@@ -404,7 +404,8 @@ function getStrokingMethodByCategory(edging, strokingCategory, historyLength)
         {
             thisHistory = sessionStatistics.getStrokes();
         }
-        dm("List: " + list.toString() + " index:" + index);
+        index = Math.round(index);
+        dm("index:" + index + " list size:" + list.length);
         while (isInHistory(edging, list[index].Name, historyLength, thisHistory))
         {
             if (goingUp)

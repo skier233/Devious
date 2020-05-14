@@ -7,5 +7,5 @@ function ONLYUP_stroke()
 
 function ONLYUP_edge()
 {
-    return "Start only stroking up your %cock% with lube %untilEdge%";
+    return "Start only stroking up your %cock% with lube ^untilEdge^";
 }

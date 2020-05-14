@@ -7,5 +7,5 @@ function STROKEHEAD_stroke()
 
 function STROKEHEAD_edge()
 {
-    return "Start stroking the head of your %cock% with lube %untilEdge%";
+    return "Start stroking the head of your %cock% with lube ^untilEdge^";
 }

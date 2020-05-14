@@ -7,5 +7,5 @@ function TWISTHEAD_stroke()
 
 function TWISTHEAD_edge()
 {
-    return "Start twisting the head of your %cock% with lube %untilEdge%";
+    return "Start twisting the head of your %cock% with lube ^untilEdge^";
 }

@@ -1,12 +1,16 @@
 run("Utilities" + java.io.File.separator + "FileUtils.js");
 run(fp("Utilities", "MathUtils.js"));
 run(fp("Utilities", "ChatUtils.js"));
+run(fp("Utilities", "Queue.js"));
 runScript(fp("Controllers", "MoodController.js"));
 runScript(fp("Controllers", "SessionController.js"));
 runScript(fp("Controllers", "StatisticsController.js"));
 runScript(fp("Controllers", "StrokingMethodsController.js"));
 runScript(fp("Controllers", "StrokingController.js"));
 runScript(fp("Controllers", "VariablesController.js"));
-print();
-normalSession();
+runScript(fp("Controllers", "ForeplayController.js"));
+runScript(fp("Controllers", "VocabularyController.js"));
+sm("test text");
+getInput("debug waiting");
+StartSession();
 sendInput("test");

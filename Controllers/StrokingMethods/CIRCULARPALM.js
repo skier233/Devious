@@ -7,5 +7,5 @@ function CIRCULARPALM_stroke()
 
 function CIRCULARPALM_edge()
 {
-    return "%startEdging% by circular palming your %cock% with lube";
+    return "^startEdging^ by circular palming your %cock% with lube";
 }

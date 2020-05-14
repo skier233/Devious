@@ -7,5 +7,5 @@ function ONLYUPCIRCLE_stroke()
 
 function ONLYUPCIRCLE_edge()
 {
-    return "Start only stroking up your %cock% with your fingers in a circular ring with lube %untilEdge%";
+    return "Start only stroking up your %cock% with your fingers in a circular ring with lube ^untilEdge^";
 }

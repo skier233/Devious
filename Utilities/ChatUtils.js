@@ -3,6 +3,7 @@ ignoreModule();
 
 //Custom/SendMessage wrapper. This is the main function you will use for any new modules that want to send a message!!
 function m(message, delay, showTyping) {
+    message = parseVocabs(message);
     if (showTyping != null)
         sendMessage(message, delay, showTyping);
     else if (delay != null)
@@ -42,29 +43,35 @@ function em(message, delay)
 
 //Personality setup/settings message
 function sysMes(message) {
+    message = parseVocabs(message);
     sysm("<c=red b>[Devious]:<><b> " + message);
 }
 
 function getInput()
 {
     let toReturn = null;
-    if (arguments.length == 1)
+    if (arguments.length === 1)
     {
-        toReturn = sendInput(arguments[0]);
+        let message = parseVocabs(arguments[0]);
+        toReturn = sendInput(message);
     }
-    else if (arguments.length == 2)
+    else if (arguments.length === 2)
     {
-        toReturn = sendInput(arguments[0], arguments[1]);
+        let message = parseVocabs(arguments[0]);
+        toReturn = sendInput(message, arguments[1]);
     }
-    else if (arguments.length == 3)
+    else if (arguments.length === 3)
     {
-        toReturn = sendInput(arguments[0], arguments[1], arguments[2]);
+        let message = parseVocabs(arguments[0]);
+        toReturn = sendInput(message, arguments[1], arguments[2]);
     }
     return toReturn;
 }
 
 //Personality setup/settings message
 function sysMesInput(message) {
+    message = parseVocabs(message);
+    message = parseVocabs(message);
     let answertype = Java.type("me.goddragon.teaseai.api.chat.Answer");
     let chatHandler = Java.type("me.goddragon.teaseai.api.chat.ChatHandler");
     let answer = new answertype(0);

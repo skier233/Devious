@@ -7,5 +7,5 @@ function STOMACHRUB_stroke()
 
 function STOMACHRUB_edge()
 {
-    return "Start rubbing your %cock% back and forth across your stomach with lube %untilEdge%";
+    return "Start rubbing your %cock% back and forth across your stomach with lube ^untilEdge^";
 }

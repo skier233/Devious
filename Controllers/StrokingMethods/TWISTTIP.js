@@ -7,5 +7,5 @@ function TWISTTIP_stroke()
 
 function TWISTTIP_edge()
 {
-    return "%startEdging% by twisting the tip of your %cock% with lube";
+    return "^startEdging^ by twisting the tip of your %cock% with lube";
 }

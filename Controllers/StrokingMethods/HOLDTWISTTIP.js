@@ -7,5 +7,5 @@ function HOLDTWISTTIP_stroke()
 
 function HOLDTWISTTIP_edge()
 {
-    return "%startEdging% by holding down the skin of your %cock% and twisting the tip with the other with lube";
+    return "^startEdging^ by holding down the skin of your %cock% and twisting the tip with the other with lube";
 }

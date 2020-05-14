@@ -3,7 +3,8 @@ let _strokingMoods = ["NEUTRAL", "INTENSE", "TEASE", "TORTURE", "RAPIDFIRE"];
 
 let _strokingMood = "INTENSE";
 let _angerLevel = 50;
-let _strokingLevel = 50;
+
+let _strokingLevel = 80;
 
 let _sessionStrokePoints = 0;
 let _currentStrokePoints = 0;
@@ -24,7 +25,7 @@ function changeStrokingMood(moodToChange, moodThreshold)
     if (moodToChange != null)
     {
         let index = _strokingMoods.indexOf(moodToChange.toUpperCase());
-        if (index == -1)
+        if (index === -1)
         {
             em("Mood: " + moodToChange + " is not a valid mood and was not recognized");
             return;
@@ -66,6 +67,11 @@ function getAngerLevel()
 function getStrokingLevel()
 {
     return _strokingLevel;
+}
+
+function setStrokingLevel(toSet)
+{
+    _strokingLevel = toSet;
 }
 
 function registerStrokePoints(points)

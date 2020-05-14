@@ -7,5 +7,5 @@ function NORMALSTROKELUBE_stroke()
 
 function NORMALSTROKELUBE_edge()
 {
-    return "%startEdging% with one hand with lube";
+    return "^startEdging^ with one hand with lube";
 }

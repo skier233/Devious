@@ -7,5 +7,5 @@ function FISTPEEK_stroke()
 
 function FISTPEEK_edge()
 {
-    return "%startEdging% by making a fist peeking the head of your %cock% into it with lube";
+    return "^startEdging^ by making a fist peeking the head of your %cock% into it with lube";
 }

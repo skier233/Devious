@@ -7,5 +7,5 @@ function ONLYDOWN_stroke()
 
 function ONLYDOWN_edge()
 {
-    sm("Start only stroking down your %cock% with lube %untilEdge%");
+    sm("Start only stroking down your %cock% with lube ^untilEdge^");
 }

@@ -7,5 +7,5 @@ function TICKLESWEET_stroke()
 
 function TICKLESWEET_edge()
 {
-    return "Start tickling the sweet spot of your %cock% without moving the skin %untilEdge%";
+    return "Start tickling the sweet spot of your %cock% without moving the skin ^untilEdge^";
 }

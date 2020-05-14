@@ -7,5 +7,5 @@ function FIGUREEIGHT_stroke()
 
 function FIGUREEIGHT_edge()
 {
-    return "%startEdging% by doing the figure eight on your %cock% with lube";
+    return "^startEdging^ by doing the figure eight on your %cock% with lube";
 }

@@ -7,5 +7,5 @@ function STROKETIP_stroke()
 
 function STROKETIP_edge()
 {
-    return "Start stroking the tip of your %cock% with lube %untilEdge%";
+    return "Start stroking the tip of your %cock% with lube ^untilEdge^";
 }

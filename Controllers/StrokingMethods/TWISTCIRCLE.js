@@ -7,5 +7,5 @@ function TWISTCIRCLE_stroke()
 
 function TWISTCIRCLE_edge()
 {
-    return "Make a circular ring with your fingers and start twisting around the bottom of the tip of your %cock% with lube %untilEdge%";
+    return "Make a circular ring with your fingers and start twisting around the bottom of the tip of your %cock% with lube ^untilEdge^";
 }
